@@ -17,9 +17,9 @@ spec:
         image: registryhdw3309.azurecr.io/tripinsights/tripviewer:1.0
         env:
         - name: USERPROFILE_API_ENDPOINT
-          value: "http://userprofile-backend"
+          value: "http://userprofile-backend:8080"
         - name: TRIPS_API_ENDPOINT
-          value: "http://trips-backend"
+          value: "http://trips-backend:8080"
         resources:
           requests:
             cpu: 100m
