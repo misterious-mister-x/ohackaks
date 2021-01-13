@@ -38,6 +38,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: tripviewer-frontend
+  namespace: web
 spec:
   type: LoadBalancer
   ports:
