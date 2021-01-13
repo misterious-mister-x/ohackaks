@@ -34,3 +34,14 @@ spec:
         ports:
         - containerPort: 80
           name: trips
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trips-backend
+spec:
+  ports:
+    - port: 8080
+    - targetPort: 80
+  selector:
+    app: trips

@@ -30,3 +30,15 @@ spec:
         ports:
         - containerPort: 80
           name: tripviewer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tripviewer-frontend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  - targetPort: 80
+  selector:
+    app: tripviewer

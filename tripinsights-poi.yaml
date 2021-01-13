@@ -36,3 +36,14 @@ spec:
         ports:
         - containerPort: 80
           name: poi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: poi-backend
+spec:
+  ports:
+    - port: 8080
+    - targetPort: 80
+  selector:
+    app: poi
