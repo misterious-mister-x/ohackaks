@@ -34,3 +34,14 @@ spec:
         ports:
         - containerPort: 80
           name: user-java
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-java-backend
+spec:
+  ports:
+    - port: 8080
+    - targetPort: 80
+  selector:
+    app: user-java
