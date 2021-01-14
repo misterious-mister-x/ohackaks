@@ -1,0 +1,320 @@
+    1  ls
+    2  kctl
+    3  kubectl 
+    4  sudo snap install kubectl
+    5  sudo snap install kubectl --classic
+    6  kubectl 
+    7  sudo apt update 
+    8  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+    9  sudo az aks get-credentials --resource-group teamResources --name Team4KAS --admin
+   10  az login
+   11  sudo az login
+   12  sudo az aks get-credentials --resource-group teamResources --name Team4KAS --admin
+   13  az login
+   14  sudo az login
+   15  az
+   16  clear
+   17  hrlm
+   18  helm
+   19  sudo snap install helm
+   20  sudo snap install helm --classic
+   21  helm
+   22  clear
+   23  pwd
+   24  kubectl get namespace
+   25  ll -d .kube
+   26  ll -d .kube/config 
+   27  sudo chown contosoadm:contosoadm .kube/config
+   28  sudo chown contosoadm:contosoadm .kube
+   29  ll -d .kube/config 
+   30  kubectl get namespace
+   31  kubectl create namespace ingress-basic
+   32  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+   33  helm install nginx-ingress ingress-nginx/ingress-nginx 
+   34  set -o vi
+   35  kjh
+   36  vi ~/.bashrc
+   37  source ~/.bashrc
+   38  clear
+   39  kjh
+   40  helm install nginx-ingress ingress-nginx/ingress-nginx     --namespace ingress-basic     --set controller.replicaCount=2     --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux     --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux     --set controller.admissionWebhooks.patch.nodeSelector."beta\.kubernetes\.io/os"=linux
+   41  piVersion: networking.k8s.io/v1beta1
+   42  clear
+   43  ll
+   44  git clone https://github.com/misterious-mister-x/ohackaks
+   45  ll
+   46  cd ohackaks/
+   47  ll
+   48  vi ingress.yaml
+   49  kubectl --namespace ingress-basic get svc
+   50  vi ingress.yaml
+   51  cat ingress.yaml 
+   52  cat -tev ingress.yaml 
+   53  vi ingress.yaml 
+   54  cat ingress.yaml | grep -v ^$
+   55  cat ingress.yaml | grep -v ^$ > ingres-basic.yaml
+   56  mv ingres-basic.yaml ingress-basic.yaml
+   57  ll
+   58  vi ingress-basic.yaml 
+   59  rm ingress.yaml 
+   60  vi ingress-basic.yaml 
+   61  vi temp
+   62  cat tempx.yaml | grep -v ^$ > ingress-basic.yaml
+   63  ll -rt
+   64  cat temp | grep -v ^$ > ingress-basic.yaml
+   65  cat ingress-basic.yaml 
+   66  rm temp
+   67  vi ingress-basic.yaml 
+   68  ll
+   69  cat tripinsights-tripviewer.yaml 
+   70  vi ingress-basic.yaml 
+   71  kubectl get pods
+   72  kubectl apply -f .
+   73  cat HIDeployment.yaml 
+   74  rm HIDeployment.yaml 
+   75  ll
+   76  kubectl apply -f .
+   77  kubectl get pods
+   78  kubectl get ns
+   79  kubectl get pods --namespace ingress-basic
+   80  kubectl get pods --namespace web
+   81  kubectl get pods --namespace api
+   82  kubectl get svc --namespace api
+   83  kubectl get svc --namespace default
+   84  kubectl delete -f .
+   85  ll
+   86  vi tripinsights-poi.yaml 
+   87  kubectl apply -f tripinsights-poi.yaml 
+   88  kubectl apply -f namespace.yaml 
+   89  kubectl apply -f tripinsights-poi.yaml 
+   90  clear
+   91  kubectl get ns
+   92  kubectl get pod --namespace api
+   93  kubectl get svc --namespace api
+   94  ll
+   95  vi tripinsights-trips.yaml
+   96  vi tripinsights-trip.yaml
+   97  vi tripinsights-tripviewer.yaml
+   98  ll
+   99  vi tripinsights-userjava.yaml 
+  100  vi tripinsights-userprofile.yaml 
+  101  vi ingress-basic.yaml 
+  102  cp ingress-basic.yaml ingress-api.yaml
+  103  mv ingress-basic.yaml ingress-web.yaml
+  104  vi ingress-api.yaml 
+  105  cat ingress-api.yaml 
+  106  clear
+  107  cat ingress-api.yaml 
+  108  vi ingress-web.yaml 
+  109  kubectl apply -f .
+  110  kubectl get ns
+  111  kubectl get deployments --namespace apBBi
+  112  kubectl get services --namespace api
+  113  kubectl get ingress --namespace api
+  114  kubectl get ingress --namespace web
+  115  jq
+  116  sudo apt install jq
+  117  vi ~.,bashrc
+  118  vi ~/.bashrc
+  119  source ~/.bashrc
+  120  kubectl --namespace ingress-basic get services 
+  121  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller 
+  122  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller  -h
+  123  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json
+  124  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq .
+  125  jq version
+  126  jq -version
+  127  jq --version
+  128  export JQ_COLORS="1;90:0;35:0;35:0;91:0;33:1;37:1;37"
+  129  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq .
+  130  re
+  131  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq .status
+  132  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq .status.loadBalancer.ingress.ip
+  133  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq .status.loadBalancer.ingress[0].ip
+  134  kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[0].ip)
+  135  ingressIp=$(kubectl --namespace ingress-basic get services nginx-ingress-ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[0].ip)
+  136  echo $ingressIp
+  137  az network dns --help
+  138  ll -dA
+  139  ll -dA .??*
+  140  ll -A
+  141  ll .azure
+  142  cd
+  143  ll -A
+  144  sudo chown -R contosoadm:contosoadm .azure
+  145  ll -A
+  146  cd -
+  147  az network dns --help
+  148  az network dns zone list
+  149  az configure
+  150  az network dns zone list
+  151  ll
+  152  vi ingress-web.yaml 
+  153  cat ingress-web.yaml 
+  154  kubectl apply -f ingress-web.yaml 
+  155  clear
+  156  cat ingress-api.yaml 
+  157  ll
+  158  cd ohackaks/
+  159  ll
+  160  cat tripinsights-poi.yaml 
+  161  kubectl apply -f ingress-api.yaml 
+  162  cat ingress-*
+  163  grep end$ *
+  164  vi ingress-web.yaml 
+  165  sudo az aks get-credentials --resource-group teamResources --name Team4KAS --admin
+  166  ll
+  167  cd ohackaks/
+  168  ll
+  169  vi ingress-web.yaml 
+  170  kubectl apply -f ingress-web.yaml 
+  171  vi ingress-web.yaml 
+  172  kubectl apply -f ingress-web.yaml 
+  173  vi ingress-web.yaml 
+  174  echo /path | grep path
+  175  echo /path | grep /
+  176  kubectl get svc --namespace web
+  177  curl http://10.2.3.62
+  178  curl http://20.54.27.242
+  179  curl
+  180  curl http://51.104.165.26
+  181  curl http://20.54.27.242:8080
+  182  curl http://10.2.3.62:8080
+  183  ifconfig eth0
+  184  curl http://20.54.27.242:8080
+  185  kubectl get svc --namespace api
+  186  curl http://10.2.3.40:8080
+  187  curl http://10.2.3.40:8080/api/user-java/healthcheck
+  188  curl http://10.2.3.40:8080/api/userjava/healthcheck
+  189  ping 10.2.3.90
+  190  kubectl get nodes
+  191  kubectl get nodes --help
+  192  kubectl get nodes -o json | jq .[].metaxxa
+  193  kubectl get nodes -o json | jq .[].metadata
+  194  kubectl get nodes -o json | jq .[]|.metadata
+  195  kubectl get nodes -o json | jq '.[]|.metadata'
+  196  kubectl get nodes -o json | jq '.[].metadata'
+  197  kubectl get cwnodes -o json | jq '.[]|.metadata'
+  198  kubectl get pods -o json 
+  199  kubectl get svc --namespace api --output json
+  200  ll
+  201  git status
+  202  git add ingre*
+  203  git status
+  204  git add -a
+  205  git add -A
+  206  git status
+  207  git commit -a -m "ingress"
+  208  git config --global user.email "richeney@microsoft.com"
+  209  git config --global user.name "Richard Cheney"
+  210  git commit -a -m "ingress"
+  211  git remote -v
+  212  git push
+  213  git pull
+  214  git status
+  215  git push
+  216  git status
+  217  ls
+  218  cd ohackaks/
+  219  ls
+  220  git fetch
+  221  kubectl get namespaces
+  222  kubectl get role
+  223  kubectl get role --all
+  224  kubectl get role --help
+  225  kubectl get role -A
+  226  kubectl apply -f ./roles-web
+  227  ls
+  228  kubectl apply -f roles-web
+  229  kubectl apply -f roles-web.yaml 
+  230  kubectl apply -f roles-api.yaml 
+  231  kubectl apply -f rolebindings-webdev.yaml 
+  232  kubectl apply -f rolebindings-apidev.yaml 
+  233  kubectl get role --namespace=api
+  234  kubectl get role --namespace=web
+  235  kubectl get role --namespace=api
+  236  kubectl get role --namespace=web
+  237  kubectl get rolebinding --namespace=api
+  238  kubectl get rolebinding --namespace=webkubectl describe rolebinding --namespace=api
+  239  kubectl describe rolebinding --namespace=web
+  240  kubectl describe rolebinding --namespace=api
+  241  kubectl describe rolebinding --namespace=webkubectl describe rolebinding --namespace=api
+  242  kubectl describe rolebinding --namespace=api
+  243  az aks get-credentials --resource-group teamResources --name team4tripviewer
+  244  kubectl describe rolebinding --namespace=api
+  245  az aks get-credentials --resource-group teamResources --name team4tripviewer
+  246  rm  /home/contosoadm/.kube/config
+  247  ls  /home/contosoadm/.kube/config
+  248  az aks get-credentials --resource-group teamResources --name team4tripviewer
+  249  kubectl describe rolebinding --namespace=api
+  250  kubectl describe rolebinding --namespace=web
+  251  kubectl get pod 
+  252  kubectl get pod --namespace=web
+  253  kubectl get pod --all
+  254  kubectl get pod --help
+  255  kubectl get pod -A
+  256  ls
+  257  more tripinsights-tripviewer.yaml 
+  258  kubectl get pod -A
+  259  az aks get-credentials --resource-group m --name myAKSCluster --overwrite-existing
+  260  az aks get-credentials --resource-group teamResources --name myAKSCluster --overwrite-existing
+  261  az aks get-credentials --resource-group teamResources --name team4tripviewer --overwrite-exising
+  262  az aks get-credentials --resource-group teamResources --name team4tripviewer --overwrite-existing
+  263  kubectl get pod -A
+  264  kubectl get pod --namespace=web
+  265  kubectl get pod --namespace=we
+  266  kubectl get pod --namespace=api
+  267  kubectl get pod --namespace=web
+  268  kubectl edit pod poi
+  269  kubectl edit pod poi-7954d86f84-7n7l5 
+  270  kubectl edit pod trips-6bd7945546-wsqw9  
+  271  kubectl get pod --namespace=web
+  272  kubectl edit pod tripviewer-c6fd875cb-bztzp 
+  273  kubectl edit pod tripviewer-c6fd875cb-bztzp --namespace=web
+  274  kubectl edit deploy tripviewer --namespace=web
+  275  kubectl get deploy
+  276  kubectl get deploy --namespace=web
+  277  kubectl get deploy --namespace=api
+  278  kubectl get pod --namespace=api
+  279  kubectl edit pod poi-7954d86f84-7n7l5  -n api 
+  280  kubectl get pod --namespace=api
+  281  kubectl get pod --namespace=web
+  282  kubectl edit pod poi-7954d86f84-7n7l5  -n api 
+  283  az aks get-credentials --resource-group teamResources --name team4tripviewer --overwrite-exising
+  284  kubectl get pod --namespace=web
+  285  kubectl edit pod tripviewer-c6fd875cb-bztzp -n web
+  286  cls
+  287  kubectl edit pod tripviewer-c6fd875cb-bztzp -n web
+  288  kubectl get pod --namespace=api
+  289  kubectl edit pod poi-7954d86f84-7n7l5 -n api
+  290  az aks get-credentials --resource-group teamResources --name team4tripviewer --overwrite-exising
+  291  az aks get-credentials --resource-group teamResources --name team4tripviewer --overwrite-existing
+  292  cls
+  293  kubectl get pod --namespace=api
+  294  az aks show --name team4tripviewer --resource-group teamResources
+  295  kubectl get pod
+  296  kubectl get pod -A
+  297  helm repo add csi-secrets-store-provider-azure https://raw.githubusercontent.com/Azure/secrets-store-csi-driver-provider-azure/master/charts
+  298  helm install csi-secrets-store-provider-azure/csi-secrets-store-provider-azure --generate-name
+  299  helm repo add csi-secrets-store-provider-azure https://raw.githubusercontent.com/Azure/secrets-store-csi-driver-provider-azure/master/charts
+  300  kubectl describe pod/poi
+  301  kubectl describe pod/poi --namespace=web
+  302  kubectl describe pod/poi --namespace=api
+  303  az aks show --name team4tripviewer --resource-group teamResources
+  304  ls -RA
+  305  ls -R
+  306  ls
+  307  cd ohackaks/
+  308  dir
+  309  more secretProvederNew.yaml 
+  310  ls
+  311  more podIdentityAndBinding.yaml 
+  312  cls
+  313  clear
+  314  ls
+  315  az extension add --name aks-preview
+  316  az extension update --name aks-preview
+  317  az feature register --name PodSecurityPolicyPreview --namespace Microsoft.ContainerService
+  318  az feature list -o table --query "[?contains(name, 'Microsoft.ContainerService/PodSecurityPolicyPreview')].{Name:name,State:properties.state}"
+  319  history
+  320  history > history.txt
