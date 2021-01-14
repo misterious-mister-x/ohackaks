@@ -15,5 +15,5 @@ spec:
       - backend:
           serviceName: tripviewer-frontend
           servicePort: 8080
-        path: /(?!api)[a-z0-9]+$
+        path: /(.*)
 ---
